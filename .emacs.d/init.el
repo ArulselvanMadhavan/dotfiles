@@ -291,6 +291,7 @@ package-archive-priorities '(("melpa-stable" . 1)))
 ;; Haskell Intero
 ;; hindent needs to be installed via stack install hindent
 ;; stylish-haskell needs to be installed via stack install stylish-haskell
+(require 'hindent)
 (use-package intero
   :init
   (haskell-style-tibbe)
