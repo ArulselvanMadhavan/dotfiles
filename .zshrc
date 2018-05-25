@@ -1,6 +1,7 @@
 curl -L git.io/antigen > antigen.zsh
-export CASK="~/.cask/bin"                      # Used by pdf-tools in emacs
-export LOCALBIN="~/.local/bin"
+export HOME="/home/arul"
+export CASK="$HOME/.cask/bin"                      # Used by pdf-tools in emacs
+export LOCALBIN="$HOME/.local/bin"
 export PATH="$PATH:$CASK:$LOCALBIN"
 source ~/antigen.zsh
 antigen use oh-my-zsh
