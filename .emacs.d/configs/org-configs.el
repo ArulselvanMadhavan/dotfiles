@@ -1,5 +1,4 @@
 (use-package org
-  :ensure t
   :config
   (add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|txt\\)$" . org-mode))
   (setq org-todo-keywords
