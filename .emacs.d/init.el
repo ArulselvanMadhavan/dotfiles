@@ -25,7 +25,8 @@ package-archive-priorities '(("melpa-stable" . 1)))
       show-paren-delay 0.5
       use-package-always-ensure t
       sentence-end-double-space nil
-      ensime-startup-notification nil)
+      ensime-startup-notification nil
+      apropos-sort-by-scores t)
 
 ;; Buffer local variables
 (setq-default indent-tabs-mode nil ;; Turn off tabs and prefer spaces
@@ -56,7 +57,7 @@ package-archive-priorities '(("melpa-stable" . 1)))
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (helm-command imenu-anywhere xref-js2 use-package undo-tree twilight-anti-bright-theme treemacs-projectile tide smartparens racer popup-imenu pdf-tools pcre2el origami org magit js2-refactor intero idris-mode hindent highlight-symbol helm-projectile goto-chg flycheck-rust flycheck-cask expand-region exec-path-from-shell eshell-prompt-extras ensime cargo beacon))))
+    (rjsx-mode helm-command imenu-anywhere xref-js2 use-package undo-tree twilight-anti-bright-theme treemacs-projectile tide smartparens racer popup-imenu pdf-tools pcre2el origami org magit js2-refactor intero idris-mode hindent highlight-symbol helm-projectile goto-chg flycheck-rust flycheck-cask expand-region exec-path-from-shell eshell-prompt-extras ensime cargo beacon))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

@@ -21,3 +21,5 @@
 	"Create-file"
       :action 'find-file))
   (add-to-list 'helm-projectile-sources-list helm-source-file-not-found t))
+
+(provide 'projectile-configs)

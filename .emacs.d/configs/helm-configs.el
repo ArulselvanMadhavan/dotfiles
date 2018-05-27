@@ -21,13 +21,13 @@
    ) ; end :commands
   :init
   (helm-mode 1)
-  (helm-autoresize-mode 1)
+  (helm-autoresize-mode 1)    
   :config
     ;auto resize, and set resize limits
     (setq helm-autoresize-max-height 0)
     (setq helm-autoresize-min-height 20)
 
-    (setq helm-buffer-max-length nil)
+    ;; (setq helm-buffer-max-length 20)
 
     ;fuzzy matching
     ;nearly everything (global helm mode)
@@ -36,7 +36,7 @@
     ;M-x commands
     (setq helm-M-x-fuzzy-match t)
     ;in the recentf
-    ;(setq helm-recentf-fuzzy-match t)
+    (setq helm-recentf-fuzzy-match t)
     ;in buffer list
     (setq helm-buffers-fuzzy-matching t)
     ;in minibuffer (needs helm-buffers-fuzzy-matching also)
@@ -48,10 +48,18 @@
     ;in semantic
     (setq helm-semantic-fuzzy-match t)
 
+    ; settings that I copied over from previous version
+    (setq helm-split-window-in-side-p       t
+      helm-move-to-line-cycle-in-source     t
+      helm-ff-search-library-in-sexp        t
+      helm-scroll-amount                    8
+      helm-ff-file-name-history-use-recentf t
+      helm-echo-input-in-header-line        t)
+
     ;key to enter command
     ;this conflicts with almost everything, but since it's not the mechanism we use to access helm commands
     ;it works to simply change the default mapping that does have conflicts
-    (setq helm-command-prefix "C-d")
+    (setq helm-command-prefix "C-c m")
 
     ; May be used to move minibuffer to the top of helm window in helm mode
     (defun spacemacs//helm-hide-minibuffer-maybe ()
