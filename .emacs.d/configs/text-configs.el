@@ -64,5 +64,8 @@
 
 (global-set-key (kbd "C-<backspace>") 'contextual-backspace)
 
+(use-package whitespace-cleanup-mode
+  :config
+  (add-hook 'idris-mode-hook 'whitespace-cleanup-mode))
 
 (provide 'text-configs)

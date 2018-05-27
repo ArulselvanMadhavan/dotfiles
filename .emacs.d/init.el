@@ -8,8 +8,9 @@ package-archive-priorities '(("melpa-stable" . 1)))
 (package-initialize)
 (when (not package-archive-contents)
   (package-refresh-contents)
-  (package-install 'use-package))
-(require 'use-package)
+  (package-install use-package))
+
+(eval-when-compile (require 'use-package))
 
 ;; No need to add :ensure t in all packages
 (setq use-package-always-ensure t)
@@ -27,6 +28,12 @@ package-archive-priorities '(("melpa-stable" . 1)))
       sentence-end-double-space nil
       ensime-startup-notification nil
       apropos-sort-by-scores t)
+
+;; This is used by helm. So, this needs to be loaded first  before helm is loaded.
+(setq completion-ignored-extensions
+      (append completion-ignored-extensions
+              (quote
+                 (".elc" ".ibc"))))
 
 ;; Buffer local variables
 (setq-default indent-tabs-mode nil ;; Turn off tabs and prefer spaces

@@ -21,7 +21,7 @@
    ) ; end :commands
   :init
   (helm-mode 1)
-  (helm-autoresize-mode 1)    
+  (helm-autoresize-mode 1)
   :config
     ;auto resize, and set resize limits
     (setq helm-autoresize-max-height 0)
@@ -47,6 +47,8 @@
     (setq helm-apropos-fuzzy-match t)
     ;in semantic
     (setq helm-semantic-fuzzy-match t)
+    ; skip boring files in find-files
+    (setq helm-ff-skip-boring-files t)
 
     ; settings that I copied over from previous version
     (setq helm-split-window-in-side-p       t
@@ -134,7 +136,7 @@
     ("M-l" . helm-next-source)
     ("M-I" . helm-previous-page)
     ("M-K" . helm-next-page)
-    ("<tab>" . helm-execute-persistent-action)    
+    ("<tab>" . helm-execute-persistent-action)
     ("C-z" . helm-select-action)
     ("C-e" . helm-execute-persistent-action)
 
@@ -147,7 +149,7 @@
     ("M-l" . helm-next-source)
     ("M-I" . helm-previous-page)
     ("M-K" . helm-next-page)
-    ("<tab>" . helm-execute-persistent-action)    
+    ("<tab>" . helm-execute-persistent-action)
     ("C-z" . helm-select-action)
     ("C-e" . helm-execute-persistent-action)
 
@@ -171,7 +173,7 @@
     ("M-l" . helm-next-source)
     ("M-I" . helm-previous-page)
     ("M-K" . helm-next-page)
-    ("<tab>" . helm-execute-persistent-action)    
+    ("<tab>" . helm-execute-persistent-action)
     ("C-z" . helm-select-action)
     ("C-e" . helm-execute-persistent-action)
 
@@ -183,7 +185,7 @@
     ("M-l" . helm-next-source)
     ("M-I" . helm-previous-page)
     ("M-K" . helm-next-page)
-    ("<tab>" . helm-execute-persistent-action)    
+    ("<tab>" . helm-execute-persistent-action)
     ("C-z" . helm-select-action)
     ("C-e" . helm-execute-persistent-action)
 
@@ -197,7 +199,7 @@
     ("M-l" . helm-next-source)
     ("M-I" . helm-previous-page)
     ("M-K" . helm-next-page)
-    ("<tab>" . helm-execute-persistent-action)        
+    ("<tab>" . helm-execute-persistent-action)
     ("C-z" . helm-select-action)
     ("C-e" . helm-execute-persistent-action)
 
@@ -211,7 +213,7 @@
     ("M-l" . helm-next-source)
     ("M-I" . helm-previous-page)
     ("M-K" . helm-next-page)
-    ("<tab>" . helm-execute-persistent-action)        
+    ("<tab>" . helm-execute-persistent-action)
     ("C-z" . helm-select-action)
     ("C-e" . helm-execute-persistent-action)
     ) ;end of :bind
