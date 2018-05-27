@@ -27,7 +27,7 @@
     (setq helm-autoresize-max-height 0)
     (setq helm-autoresize-min-height 20)
 
-    ;; (setq helm-buffer-max-length 20)
+    (setq helm-buffer-max-length nil)
 
     ;fuzzy matching
     ;nearly everything (global helm mode)
@@ -86,9 +86,9 @@
     ;default helm keybinding is C-x c which is almost C-x C-c that's used to exit emacs.
     ("C-x c" . nil)
     ;override buffer list keys to use helm version
-    ("C-x C-b" . helm-buffers-list)
+    ;; ("C-x C-b" . helm-buffers-list)
     ;use helm-mini instead of helm-buffers-list since it includes recently visited files also
-    ;("C-x C-b" . helm-mini)
+    ("C-x C-b" . helm-mini)
     ;resume the last session again
     ("C-c C-c" . helm-resume)
     ;finding files uses helm
