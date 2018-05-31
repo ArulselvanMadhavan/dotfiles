@@ -1,5 +1,4 @@
-# curl -L git.io/antigen > antigen.zsh
-export HOME="/home/arul"
+curl -L git.io/antigen > antigen.zsh
 export CASK="$HOME/.cask/bin"                      # Used by pdf-tools in emacs
 export LOCALBIN="$HOME/.local/bin"
 export CABALBIN="$HOME/.cabal/bin"
