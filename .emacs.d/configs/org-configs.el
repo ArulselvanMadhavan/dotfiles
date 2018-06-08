@@ -11,6 +11,7 @@
               ("WAITING" :foreground "orange" :weight bold)
               ("HOLD" :foreground "magenta" :weight bold)
               ("CANCELLED" :foreground "forest green" :weight bold))))
-  (setq org-log-into-drawer t))
+  (setq org-log-into-drawer t)
+  (add-to-list 'org-src-lang-modes '("idris" . "idris")))
 
 (provide 'org-configs)
