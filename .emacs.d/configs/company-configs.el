@@ -7,7 +7,7 @@
         company-dabbrev-ignore-case nil
         company-dabbrev-code-ignore-case nil
         company-dabbrev-downcase nil
-        company-idle-delay 0
+        company-idle-delay 0.5
         company-minimum-prefix-length 2)
   :config
   (define-key company-active-map [tab] nil)
