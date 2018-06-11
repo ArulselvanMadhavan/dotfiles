@@ -12,6 +12,9 @@
               ("HOLD" :foreground "magenta" :weight bold)
               ("CANCELLED" :foreground "forest green" :weight bold))))
   (setq org-log-into-drawer t)
-  (add-to-list 'org-src-lang-modes '("idris" . "idris")))
+  (add-to-list 'org-src-lang-modes '("idris" . "idris"))
+  (setq org-agenda-files (list "~/dev/org/todo.org"))
+  :bind
+  (("C-c a" . org-agenda)))
 
 (provide 'org-configs)
