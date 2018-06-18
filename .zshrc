@@ -13,3 +13,5 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle command-not-found
 antigen theme zakaziko99/agnosterzak-ohmyzsh-theme
 antigen apply
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm

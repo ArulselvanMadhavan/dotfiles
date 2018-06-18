@@ -9,22 +9,28 @@
 
 ;;; Commentary:
 ;;; Code:
+
+(add-to-list 'load-path "~/.emacs.d/site-packages/purescript-mode/")
+(require 'purescript-mode-autoloads)
+(add-to-list 'Info-default-directory-list "~/.emacs.d/site-packages/purescript-mode/")
+
+
 (use-package purescript-mode
-  :commands (purescript-mode turn-on-purescript-indentation)
   :ensure t
-  :mode "\\.purs\\'"
+  :mode ("\\.purs$" . purescript-mode)
   :config
   (add-hook 'purescript-mode-hook 'turn-on-purescript-indentation)
   (with-eval-after-load 'purescript-indentation
-    '(diminish 'purescipt-indentation-mode))
-  :bind ("C-c C-c" . purescript-compile))
+    '(diminish 'purescript-indentation-mode)))
 
 (use-package psc-ide
   :after purescript-mode
-  :commands psc-ide-mode
+  :commands (psc-ide-mode psc-ide-server-start)
   :diminish psc-ide-mode
   :config
-  (add-hook 'purescript-mode-hook 'psc-ide-mode))
+  (add-hook 'purescript-mode-hook (lambda()
+                                    (psc-ide-mode)
+                                    (psc-ide-server-start (locate-dominating-file default-directory "bower.json")))))
 
 (use-package psci
   :after purescript-mode
