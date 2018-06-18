@@ -123,9 +123,7 @@
     ("M-K" . helm-next-page)
     ("<tab>" . helm-execute-persistent-action)
     ("C-z" . helm-select-action)
-    ("C-e" . helm-execute-persistent-action)
-
-
+    
     :map helm-buffer-map
     ("C-k" . helm-delete-current-selection)
     ("C-c C-k" . helm-delete-current-selection)
@@ -138,9 +136,7 @@
     ("M-K" . helm-next-page)
     ("<tab>" . helm-execute-persistent-action)
     ("C-z" . helm-select-action)
-    ("C-e" . helm-execute-persistent-action)
-
-
+    
     :map helm-etags-map
     ;Ergo keys
     ("M-i" . helm-previous-line)
@@ -151,7 +147,7 @@
     ("M-K" . helm-next-page)
     ("<tab>" . helm-execute-persistent-action)
     ("C-z" . helm-select-action)
-    ("C-e" . helm-execute-persistent-action)
+    
 
     :map helm-generic-files-map
     ;Ergo keys
@@ -163,8 +159,7 @@
     ("M-K" . helm-next-page)
     ("<tab>" . helm-execute-persistent-action)
     ("C-z" . helm-select-action)
-    ("C-e" . helm-execute-persistent-action)
-
+    
     :map helm-buffers-ido-virtual-map
     ;Ergo keys
     ("M-i" . helm-previous-line)
@@ -175,8 +170,7 @@
     ("M-K" . helm-next-page)
     ("<tab>" . helm-execute-persistent-action)
     ("C-z" . helm-select-action)
-    ("C-e" . helm-execute-persistent-action)
-
+    
     :map helm-grep-map
     ;Ergo keys
     ("M-i" . helm-previous-line)
@@ -187,11 +181,10 @@
     ("M-K" . helm-next-page)
     ("<tab>" . helm-execute-persistent-action)
     ("C-z" . helm-select-action)
-    ("C-e" . helm-execute-persistent-action)
-
+    
     :map helm-find-files-map
     ("C-/" . helm-ff-run-find-sh-command)
-    ("M-f" . helm-ff-run-grep)
+    ("M-g" . helm-ff-run-grep)
     ;Ergo keys
     ("M-i" . helm-previous-line)
     ("M-k" . helm-next-line)
@@ -201,8 +194,7 @@
     ("M-K" . helm-next-page)
     ("<tab>" . helm-execute-persistent-action)
     ("C-z" . helm-select-action)
-    ("C-e" . helm-execute-persistent-action)
-
+    
 
     ;used during helm-regexp
     :map helm-moccur-map
@@ -215,7 +207,6 @@
     ("M-K" . helm-next-page)
     ("<tab>" . helm-execute-persistent-action)
     ("C-z" . helm-select-action)
-    ("C-e" . helm-execute-persistent-action)
     ) ;end of :bind
   ) ; end of use-package
 
