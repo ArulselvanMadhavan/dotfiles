@@ -1,4 +1,3 @@
-curl -L git.io/antigen > antigen.zsh
 source ~/antigen.zsh
 antigen use oh-my-zsh
 antigen bundle git
@@ -15,3 +14,6 @@ antigen theme zakaziko99/agnosterzak-ohmyzsh-theme
 antigen apply
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+export CASK="$HOME/.cask/bin"
+export LOCALBIN="$HOME/.local/bin"
+export PATH="$LOCALBIN:$CASK:$PATH"

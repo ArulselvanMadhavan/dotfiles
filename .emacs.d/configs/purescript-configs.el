@@ -10,9 +10,9 @@
 ;;; Commentary:
 ;;; Code:
 
-(add-to-list 'load-path "~/.emacs.d/site-packages/purescript-mode/")
-(require 'purescript-mode-autoloads)
-(add-to-list 'Info-default-directory-list "~/.emacs.d/site-packages/purescript-mode/")
+;; (add-to-list 'load-path "~/.emacs.d/site-packages/purescript-mode/")
+;; (require 'purescript-mode-autoloads)
+;; (add-to-list 'Info-default-directory-list "~/.emacs.d/site-packages/purescript-mode/")
 
 
 (use-package purescript-mode
