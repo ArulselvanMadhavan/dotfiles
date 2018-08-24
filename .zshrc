@@ -17,3 +17,5 @@ export NVM_DIR="$HOME/.nvm"
 export CASK="$HOME/.cask/bin"
 export LOCALBIN="$HOME/.local/bin"
 export PATH="$LOCALBIN:$CASK:$PATH"
+# Just start fish shell
+exec fish
