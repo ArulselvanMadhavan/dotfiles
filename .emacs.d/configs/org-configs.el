@@ -1,3 +1,7 @@
+(use-package org-journal
+  :config
+  (setq org-journal-dir "~/dev/org/journal/"))
+
 (use-package org
   :config
   (add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|txt\\)$" . org-mode))
@@ -13,8 +17,13 @@
               ("CANCELLED" :foreground "forest green" :weight bold))))
   (setq org-log-into-drawer t)
   (add-to-list 'org-src-lang-modes '("idris" . "idris"))
-  (setq org-agenda-files (list "~/dev/org/todo.org"))
+  (setq org-agenda-files (list "~/dev/org/todo.org"
+                               "~/dev/org/journal/"))
+  (add-hook 'org-mode-hook
+            (lambda()
+              (auto-fill-mode 1)))
   :bind
   (("C-c a" . org-agenda)))
+
 
 (provide 'org-configs)

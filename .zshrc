@@ -17,3 +17,8 @@ export NVM_DIR="$HOME/.nvm"
 autoload -U compinit
 fpath=($HOME/.bloop/zsh $fpath)
 compinit
+export CASK="$HOME/.cask/bin"
+export LOCALBIN="$HOME/.local/bin"
+export PATH="$LOCALBIN:$CASK:$PATH"
+# Just start fish shell
+exec fish

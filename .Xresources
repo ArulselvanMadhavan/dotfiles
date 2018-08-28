@@ -1,0 +1,3 @@
+! Loads the terminal configuration for urxvt
+#include ".Xresources.d/rxvt-unicode"
+!Heavily Inspired by https://wiki.archlinux.org/index.php/Rxvt-unicode#Configuration
