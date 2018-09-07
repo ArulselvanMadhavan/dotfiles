@@ -14,6 +14,9 @@ antigen theme zakaziko99/agnosterzak-ohmyzsh-theme
 antigen apply
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+autoload -U compinit
+fpath=($HOME/.bloop/zsh $fpath)
+compinit
 export CASK="$HOME/.cask/bin"
 export LOCALBIN="$HOME/.local/bin"
 export PATH="$LOCALBIN:$CASK:$PATH"
