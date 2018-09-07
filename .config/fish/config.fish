@@ -39,3 +39,5 @@ if set -q SSH_TTY
 end
 # Run Neofetch
 neofetch
+# Add cabal to path
+set -gx PATH $PATH "~/.cabal/bin"

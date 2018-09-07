@@ -12,7 +12,8 @@
   (add-to-list 'projectile-globally-ignored-directories "bower_components")
   (add-to-list 'projectile-globally-ignored-directories ".git")
   (add-to-list 'projectile-globally-ignored-directories "build")
-  (add-to-list 'projectile-globally-ignored-directories "dist"))
+  (add-to-list 'projectile-globally-ignored-directories "dist")
+  (add-to-list 'projectile-globally-ignored-directories ".cabal-sandbox"))
 
 ;; Projectile create new file if not found
 (with-eval-after-load 'helm-projectile

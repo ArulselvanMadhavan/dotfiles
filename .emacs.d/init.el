@@ -62,9 +62,14 @@ package-archive-priorities '(("melpa-stable" . 1)))
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(haskell-stylish-on-save am-haskell-format-on-save)
+ '(hindent-indent-size 4)
+ '(hindent-line-length 100)
+ '(hindent-reformat-buffer-on-save nil)
+ '(hindent-style "johan-tibell")
  '(package-selected-packages
    (quote
-    (yaml-mode helm-dictionary org-journal leuven-theme toml-mode toml-mode rjsx-mode helm-command imenu-anywhere xref-js2 use-package undo-tree twilight-anti-bright-theme treemacs-projectile tide smartparens racer popup-imenu pdf-tools pcre2el origami org magit js2-refactor intero idris-mode hindent highlight-symbol helm-projectile goto-chg flycheck-rust flycheck-cask expand-region exec-path-from-shell eshell-prompt-extras ensime cargo beacon))))
+    (which-key dante haskell-snippets yaml-mode helm-dictionary org-journal leuven-theme toml-mode toml-mode rjsx-mode helm-command imenu-anywhere xref-js2 use-package undo-tree twilight-anti-bright-theme treemacs-projectile tide smartparens racer popup-imenu pdf-tools pcre2el origami org magit js2-refactor intero idris-mode hindent highlight-symbol helm-projectile goto-chg flycheck-rust flycheck-cask expand-region exec-path-from-shell eshell-prompt-extras ensime cargo beacon))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
