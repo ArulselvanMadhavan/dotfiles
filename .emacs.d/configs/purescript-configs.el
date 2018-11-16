@@ -10,9 +10,9 @@
 ;;; Commentary:
 ;;; Code:
 
-;; (add-to-list 'load-path "~/.emacs.d/site-packages/purescript-mode/")
-;; (require 'purescript-mode-autoloads)
-;; (add-to-list 'Info-default-directory-list "~/.emacs.d/site-packages/purescript-mode/")
+(add-to-list 'load-path "~/lib/emacs/purescript-mode/")
+(require 'purescript-mode-autoloads)
+(add-to-list 'Info-default-directory-list "~/lib/emacs/purescript-mode")
 
 
 (use-package purescript-mode
@@ -30,6 +30,9 @@
   :config
   (add-hook 'purescript-mode-hook (lambda()
                                     (psc-ide-mode)
+                                    (company-mode)
+                                    (flycheck-mode)
+                                    (setq psc-ide-rebuild-on-save t)
                                     (psc-ide-server-start (locate-dominating-file default-directory "bower.json")))))
 
 (use-package psci

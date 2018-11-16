@@ -41,3 +41,7 @@ end
 neofetch
 # Add cabal to path
 set -gx PATH $PATH "~/.cabal/bin"
+# EMacs
+set -U EDITOR emacs
+# NVM
+# bass source ~/.nvm/nvm.sh
