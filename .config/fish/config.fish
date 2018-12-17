@@ -44,3 +44,9 @@ set -Ux GRAAL_HOME "/usr/local/graal/Home/Contents/Home"
 set PATH "$GRAAL_HOME/bin" $PATH
 # Run Neofetch
 neofetch
+# Add cabal to path
+set -gx PATH $PATH "~/.cabal/bin"
+# EMacs
+set -U EDITOR emacs
+# NVM
+# bass source ~/.nvm/nvm.sh

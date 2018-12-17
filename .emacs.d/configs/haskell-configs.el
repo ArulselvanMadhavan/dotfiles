@@ -1,27 +1,27 @@
-;; via https://github.com/tibbe/haskell-style-guide/blob/master/haskell-style.el
-(defun haskell-style-tibbe ()
-  (interactive)
-  (setq tab-width 4
-        haskell-indentation-layout-offset 4
-        haskell-indentation-left-offset 4
-        haskell-indentation-ifte-offset 4
-        haskell-indentation-where-pre-offset 4
-        haskell-indentation-where-post-offset 4))
+;; Copied from here: http://haroldcarr.com/posts/2017-10-24-emacs-haskell-dev-env.html
 
-;; Haskell Intero
-;; hindent needs to be installed via stack install hindent
-;; stylish-haskell needs to be installed via stack install stylish-haskell
-(use-package intero
-  :ensure hindent
-  :config
-  (haskell-style-tibbe)
-  (setq haskell-stylish-on-save t
-        haskell-tags-on-save    t)
-  (add-hook 'haskell-mode-hook 'intero-mode)
-  (add-hook 'haskell-mode-hook 'hindent-mode))
+(use-package haskell-mode
+  :ensure t
+  :defer t
+  ;; :commands (haskell-interactive-switch
+  ;;            haskell-process-do-type
+  ;;            haskell-process-do-info
+  ;;            haskell-process-cabal-build
+  ;;            haskell-compile)
+  ;; :bind (:map haskell-mode-map
+  ;;             ("C-c C-z" . haskell-interactive-switch)
+  ;;             ("C-c C-n C-t" . haskell-process-do-type)
+  ;;             ("C-c C-n C-i" . haskell-process-do-info)
+  ;;             ("C-c C-n C-c" . haskell-process-cabal-build)
+  ;;             ("C-c C-o" . haskell-compile))
+  :config (custom-set-variables '(haskell-tags-on-save t)
+                                ;; '(haskell-process-suggest-remove-import-lines t)
+                                ;; '(haskell-process-auto-import-loaded-modules t)
+                                ;; '(haskell-process-log t)
+                                ))
 
-;; Add Cabal bin to emacs path
-(setenv "PATH" (concat (getenv "PATH") ":" (getenv "HOME") "/.cabal/bin" ":" (getenv "HOME") "/.local/bin"))
-(setq exec-path (append exec-path (list (concat (getenv "HOME") "/.cabal/bin") (concat (getenv "HOME") "/.local/bin"))))
+(use-package haskell-snippets
+  :ensure t
+  :defer t)
 
 (provide 'haskell-configs)
