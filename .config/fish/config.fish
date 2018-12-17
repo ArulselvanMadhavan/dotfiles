@@ -37,5 +37,10 @@ end
 if set -q SSH_TTY
   set -g fish_color_host brred
 end
+
+# Set Graal Home
+set -Ux GRAAL_HOME "/usr/local/graal/Home/Contents/Home"
+# Set PATH
+set PATH "$GRAAL_HOME/bin" $PATH
 # Run Neofetch
 neofetch
