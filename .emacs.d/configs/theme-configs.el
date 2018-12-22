@@ -9,6 +9,6 @@
   (doom-themes-org-config))
 
 (add-hook 'after-init-hook
-          (lambda() (load-theme 'doom-nord-light t)))
+          (lambda() (load-theme 'doom-vibrant t)))
 
 (provide 'theme-configs)
