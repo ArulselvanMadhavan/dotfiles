@@ -41,7 +41,12 @@ end
 neofetch
 # Add cabal to path
 set -gx PATH $PATH "~/.cabal/bin"
+# Add bloop
+set -gx PATH $PATH "~/.bloop"
 # EMacs
 set -U EDITOR emacs
 # NVM
 # bass source ~/.nvm/nvm.sh
+
+# opam configuration
+source /home/arul/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true

@@ -77,7 +77,7 @@ package-archive-priorities '(("melpa-stable" . 1)))
  '(hindent-style "johan-tibell")
  '(package-selected-packages
    (quote
-    (doom-themes company-lsp lsp-haskell lsp-mode lsp-ui haskell-cabal racket-mode which-key dante haskell-snippets yaml-mode helm-dictionary org-journal leuven-theme toml-mode toml-mode rjsx-mode helm-command imenu-anywhere xref-js2 use-package undo-tree twilight-anti-bright-theme treemacs-projectile tide smartparens racer popup-imenu pdf-tools pcre2el origami org magit js2-refactor intero idris-mode hindent highlight-symbol helm-projectile goto-chg flycheck-rust flycheck-cask expand-region exec-path-from-shell eshell-prompt-extras ensime cargo beacon))))
+    (utop tuareg-mode caml tuareg doom-themes company-lsp lsp-haskell lsp-mode lsp-ui haskell-cabal racket-mode which-key dante haskell-snippets yaml-mode helm-dictionary org-journal leuven-theme toml-mode toml-mode rjsx-mode helm-command imenu-anywhere xref-js2 use-package undo-tree twilight-anti-bright-theme treemacs-projectile tide smartparens racer popup-imenu pdf-tools pcre2el origami org magit js2-refactor intero idris-mode hindent highlight-symbol helm-projectile goto-chg flycheck-rust flycheck-cask expand-region exec-path-from-shell eshell-prompt-extras ensime cargo beacon))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -85,3 +85,6 @@ package-archive-priorities '(("melpa-stable" . 1)))
  ;; If there is more than one, they won't work right.
  )
 (put 'erase-buffer 'disabled nil)
+;; ## added by OPAM user-setup for emacs / base ## 56ab50dc8996d2bb95e7856a6eddb17b ## you can edit, but keep this line
+(require 'opam-user-setup "~/.emacs.d/opam-user-setup.el")
+;; ## end of OPAM user-setup addition for emacs / base ## keep this line
