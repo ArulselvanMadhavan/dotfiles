@@ -88,3 +88,22 @@ package-archive-priorities '(("melpa-stable" . 1)))
 ;; ## added by OPAM user-setup for emacs / base ## 56ab50dc8996d2bb95e7856a6eddb17b ## you can edit, but keep this line
 (require 'opam-user-setup "~/.emacs.d/opam-user-setup.el")
 ;; ## end of OPAM user-setup addition for emacs / base ## keep this line
+
+(load-file (let ((coding-system-for-read 'utf-8))
+                (shell-command-to-string "agda-mode locate")))
+
+
+;; Setting up Fonts for use with Agda/PLFA
+;;
+;; default to DejaVu Sans Mono,
+(set-face-attribute 'default nil
+		    :family "DejaVu Sans Mono"
+		    :height 120
+		    :weight 'normal
+		    :width  'normal)
+
+;; fix \:
+(set-fontset-font "fontset-default"
+		  (cons (decode-char 'ucs #x2982)
+			(decode-char 'ucs #x2982))
+		  "STIX")
