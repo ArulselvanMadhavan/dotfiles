@@ -10,6 +10,11 @@
 
 ;; Racer setup - https://github.com/racer-rust/emacs-racer
 (use-package racer
+  :requires rust-mode
+  :init (setq racer-rust-src-path
+              (concat (string-trim
+                       (shell-command-to-string "rustc --print sysroot"))
+                      "/lib/rustlib/src/rust/src")) 
   :config
   (add-hook 'racer-mode-hook #'eldoc-mode)
   (add-hook 'racer-mode-hook #'company-mode)
