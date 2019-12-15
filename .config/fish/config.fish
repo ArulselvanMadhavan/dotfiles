@@ -43,10 +43,21 @@ neofetch
 set -gx PATH $PATH "~/.cabal/bin"
 # Add bloop
 set -gx PATH $PATH "~/.bloop"
+# Add cargo bin
+set -gx PATH $PATH "~/.cargo/bin"
+# Add rust src path
+set -gx RUST_SRC_PATH (echo (rustc --print sysroot)/lib/rustlib/src/rust/src)
 # EMacs
 set -U EDITOR emacs
+set -gx OPAMEDITOR emacs
 # NVM
 # bass source ~/.nvm/nvm.sh
 
 # opam configuration
 source /home/arul/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+# Erlang OTP PATH
+set -x ERL_OTP "~/dev/otp"
+# Erlang rebar3 path
+set -gx PATH "~/.cache/rebar3/bin" $PATH
+# Set some nice Erlang variables - copied from https://adoptingerlang.org/docs/development/setup/
+set -x ERL_AFLAGS "+pc unicode -kernel shell_history enabled"

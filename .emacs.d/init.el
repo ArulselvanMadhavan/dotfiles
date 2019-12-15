@@ -33,6 +33,7 @@ package-archive-priorities '(("melpa-stable" . 1)))
 (global-set-key (kbd "C-x 8 l") "λ")
 (global-set-key (kbd "C-x 8 p") "Π")
 (global-set-key (kbd "C-x 8 s") "Σ")
+(global-set-key (kbd "C-c C-k") 'describe-char)
 ;; This is used by helm. So, this needs to be loaded first  before helm is loaded.
 (setq completion-ignored-extensions
       (append completion-ignored-extensions
@@ -50,7 +51,6 @@ package-archive-priorities '(("melpa-stable" . 1)))
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 
-
 ;; Load configs directory - https://www.emacswiki.org/emacs/LoadingLispFiles
 (defun load-directory (dir)
   (let ((load-it (lambda (f)
@@ -66,6 +66,9 @@ package-archive-priorities '(("melpa-stable" . 1)))
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("6b289bab28a7e511f9c54496be647dc60f5bd8f9917c9495978762b99d8c96a0" "3a3de615f80a0e8706208f0a71bbcc7cc3816988f971b6d237223b6731f91605" default)))
  '(haskell-process-auto-import-loaded-modules t)
  '(haskell-process-log t)
  '(haskell-process-suggest-remove-import-lines t)
@@ -75,9 +78,10 @@ package-archive-priorities '(("melpa-stable" . 1)))
  '(hindent-line-length 100)
  '(hindent-reformat-buffer-on-save nil)
  '(hindent-style "johan-tibell")
+ '(ivy-erlang-complete-erlang-root "/usr/local/lib/erlang/")
  '(package-selected-packages
    (quote
-    (utop tuareg-mode caml tuareg doom-themes company-lsp lsp-haskell lsp-mode lsp-ui haskell-cabal racket-mode which-key dante haskell-snippets yaml-mode helm-dictionary org-journal leuven-theme toml-mode toml-mode rjsx-mode helm-command imenu-anywhere xref-js2 use-package undo-tree twilight-anti-bright-theme treemacs-projectile tide smartparens racer popup-imenu pdf-tools pcre2el origami org magit js2-refactor intero idris-mode hindent highlight-symbol helm-projectile goto-chg flycheck-rust flycheck-cask expand-region exec-path-from-shell eshell-prompt-extras ensime cargo beacon))))
+    (company-distel delight flycheck-tip flymd list-unicode-display utop tuareg-mode caml tuareg doom-themes company-lsp lsp-haskell lsp-mode lsp-ui haskell-cabal racket-mode which-key dante haskell-snippets yaml-mode helm-dictionary org-journal leuven-theme toml-mode toml-mode rjsx-mode helm-command imenu-anywhere xref-js2 use-package undo-tree twilight-anti-bright-theme treemacs-projectile tide smartparens racer popup-imenu pdf-tools pcre2el origami org magit js2-refactor intero idris-mode hindent highlight-symbol helm-projectile goto-chg flycheck-rust flycheck-cask expand-region exec-path-from-shell eshell-prompt-extras ensime cargo beacon))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -107,3 +111,12 @@ package-archive-priorities '(("melpa-stable" . 1)))
 		  (cons (decode-char 'ucs #x2982)
 			(decode-char 'ucs #x2982))
 		  "STIX")
+
+
+(eval-after-load "quail/latin-ltx"
+  '(mapc (lambda (pair)
+           (quail-defrule (car pair) (cadr pair) "TeX"))
+	 '( ("\\bb" "𝔹") ("\\bl" "𝕃") ("\\bs" "𝕊")
+	    ("\\dotminus" "∸")
+	    ("\\bt" "𝕋") ("\\bv" "𝕍") ("\\cv" " O ")
+      ("\\comp" "∘") ("\\m" "⟼") ("\\om" "ω"))))

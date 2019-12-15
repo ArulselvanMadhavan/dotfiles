@@ -229,7 +229,7 @@
    helm-elscreen)
   :config
   (setq helm-autoresize-max-height 0)
-  (setq helm-autoresize-min-height 20)
+  (setq helm-autoresize-min-height 30)
   ;; Fuzzy match
   (setq helm-mode-fuzzy-match t)
   (setq helm-M-x-fuzzy-match t)
