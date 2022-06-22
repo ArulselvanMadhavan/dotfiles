@@ -265,8 +265,6 @@
     :map helm-generic-files-map
     ;Ergo keys
     ("<tab>" . helm-execute-persistent-action)
-    :map helm-buffers-ido-virtual-map
-    ("<tab>" . helm-execute-persistent-action)
     :map helm-grep-map
     ;Ergo keys
     ("<tab>" . helm-execute-persistent-action)
@@ -274,10 +272,9 @@
     ("C-/" . helm-ff-run-find-sh-command)
     ("M-g" . helm-ff-run-grep)
     ;Ergo keys
-    ("<tab>" . helm-execute-persistent-action)
-    ;used during helm-regexp
-    :map helm-moccur-map
-    ;Ergo keys
     ("<tab>" . helm-execute-persistent-action)))
+
+(use-package helm-projectile
+  :ensure t)
 
 (provide 'helm-configs)
