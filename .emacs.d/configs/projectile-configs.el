@@ -23,4 +23,5 @@
       :action 'find-file))
   (add-to-list 'helm-projectile-sources-list helm-source-file-not-found t))
 
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (provide 'projectile-configs)
