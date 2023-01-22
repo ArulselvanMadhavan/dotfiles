@@ -67,6 +67,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("5586a5db9dadef93b6b6e72720205a4fa92fd60e4ccfd3a5fa389782eab2371b" default))
  '(haskell-stylish-on-save am-haskell-format-on-save)
  '(hindent-indent-size 4)
  '(hindent-line-length 100)
