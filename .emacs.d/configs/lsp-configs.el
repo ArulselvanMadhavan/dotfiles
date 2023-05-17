@@ -40,7 +40,8 @@
 (add-to-list 'eglot-server-programs '((c++-mode c-mode) "clangd"))
 (add-hook 'c-mode-hook 'eglot-ensure)
 (add-hook 'c++-mode-hook 'eglot-ensure)
-
+(add-hook 'before-save-hook 'eglot-format-buffer -10 t)
+(add-hook 'after-save-hook 'eglot-format-buffer)
 ;; FORTRAN - fortls
 (add-to-list
  'eglot-server-programs
