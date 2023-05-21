@@ -78,7 +78,7 @@
  '(hindent-style "johan-tibell")
  '(ispell-dictionary nil)
  '(package-selected-packages
-   '(protobuf-mode tree-sitter-langs cargo-mode company-racer ox-gfm eglot futhark-mode dockerfile-mode jupyter elpy rtags cmake-ide helm-projectile yaml-mode which-key treemacs-projectile treemacs doom-themes whitespace-cleanup-mode smartparens beacon flycheck-rust racer cargo toml-mode racket-mode cmake-mode utop use-package rjsx-mode projectile pdf-tools pcre2el origami org-journal multiple-cursors merlin magit lsp-ui ivy-erlang-complete imenu-anywhere idris-mode hydra hindent helm haskell-snippets flycheck-pos-tip flycheck-popup-tip flycheck-inline flycheck-cask exec-path-from-shell elscreen dante avy)))
+   '(tempel posframe protobuf-mode tree-sitter-langs cargo-mode company-racer ox-gfm eglot futhark-mode dockerfile-mode jupyter elpy rtags cmake-ide helm-projectile yaml-mode which-key treemacs-projectile treemacs doom-themes whitespace-cleanup-mode smartparens beacon flycheck-rust racer cargo toml-mode racket-mode cmake-mode utop use-package rjsx-mode projectile pdf-tools pcre2el origami org-journal multiple-cursors merlin magit lsp-ui ivy-erlang-complete imenu-anywhere idris-mode hydra hindent helm haskell-snippets flycheck-pos-tip flycheck-popup-tip flycheck-inline flycheck-cask exec-path-from-shell elscreen dante avy)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
