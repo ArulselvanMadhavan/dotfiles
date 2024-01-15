@@ -246,7 +246,7 @@
     helm-scroll-amount                    8
     helm-ff-file-name-history-use-recentf t
     helm-echo-input-in-header-line        t)
-  (require 'helm-config)
+  ;; (require 'helm-config)
   :bind
   (("M-x" . helm-M-x)
   ("C-x C-f" . helm-find-files)

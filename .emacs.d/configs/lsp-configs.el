@@ -47,15 +47,9 @@
 ;;  'eglot-server-programs
 ;;  '(f90-mode . ("fortls" "--notify_init" "--nthreads=4")))
 
-;; (add-to-list 'load-path "~/dev/lsp-bridge")
-
 ;; (require 'yasnippet)
 ;; (yas-global-mode 1)
 
-;; (require 'lsp-bridge)
-;; (global-lsp-bridge-mode)
-
-;; (setq lsp-bridge-c-lsp-server "clangd")
 ;; (provide 'lsp-configs)
 
 ;; ONE-KEY
@@ -78,6 +72,7 @@
 (add-to-list 'load-path "~/.emacs.d/site-lisp/lsp-bridge")
 (require 'lsp-bridge)
 (require 'yasnippet)
+(setq lsp-bridge-c-lsp-server "clangd")
 
 (setq acm-enable-icon t
       acm-enable-doc t
@@ -95,8 +90,10 @@
       lsp-bridge-signature-show-function 'message
       lsp-bridge-signature-posframe-params  '(:poshandler posframe-poshandler-point-bottom-left-corner-upward :internal-border-width 1 :max-width 30 :max-height 12)
       lsp-bridge-lookup-doc-tooltip-max-width 60
-      lsp-bridge-lookup-doc-tooltip-max-height 20      
+      lsp-bridge-lookup-doc-tooltip-max-height 20
       )
+
+(setq lsp-zig-zls-executable "/snap/bin/zls")
 (setq lsp-bridge-c-lsp-server "clangd")
 (setq lsp-bridge-python-lsp-server "pyright")
 (setq lsp-bridge-multi-lang-server-extension-list nil)
@@ -146,5 +143,5 @@
 			  (:key "`" :description "Add Fold code" :command vimish-fold :filename "init-vimish-fold")
 			  (:key "~" :description "Delete Fold code" :command vimish-fold-delete :filename "init-vimish-fold"))
 
-(call-interactively 'global-lsp-bridge-mode)
+;; (call-interactively 'global-lsp-bridge-mode)
 (provide 'lsp-configs)
